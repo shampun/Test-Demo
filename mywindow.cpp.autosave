@@ -314,13 +314,14 @@ void MyWindow::on_pushButton_3_clicked()
 
 void MyWindow::on_pushButton_4_clicked()
 {
-    model = new QSqlTableModel();
-
-
-    model->setTable("instructors");
-    model->select();
-
-    ui->tableView->setModel(model);
+    QSqlQuery addstudent;
+        addgrades.prepare ("insert into mydb.grades (TestNum,Score,Courses_has_Students_Courses_idCourses,Courses_has_Students_Students_idStudents ) values (?, ?,?,?)");
+       addgrades.bindValue(0, testnum);
+        addgrades.bindValue(1, score);
+        addgrades.bindValue(2, courseid);
+        addgrades.bindValue(3, studid);
+        addgrades.exec();
+        close();
 
 }
 

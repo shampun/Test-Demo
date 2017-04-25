@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -24,8 +25,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        mywindow.cpp
+        mywindow.cpp \
+    sortfilterproxymodel.cpp
 
-HEADERS  += mywindow.h
+HEADERS  += mywindow.h \
+    sortfilterproxymodel.h
 
 FORMS    += mywindow.ui
+
+

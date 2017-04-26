@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2017-03-11T23:01:15
+# Project created by QtCreator 2017-04-16T18:31:58
 #
 #-------------------------------------------------
 
@@ -9,7 +9,7 @@ QT       += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = FirstGUI
+TARGET = SIMS
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -25,10 +25,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        mywindow.cpp
+        sims.cpp \
+    teacher.cpp \
+    loginwindow.cpp \
+    admin.cpp
 
-HEADERS  += mywindow.h
+HEADERS  += sims.h \
+    teacher.h \
+    loginwindow.h \
+    admin.h
 
-FORMS    += mywindow.ui
-
-
+FORMS    += sims.ui \
+    teacher.ui \
+    loginwindow.ui \
+    admin.ui
